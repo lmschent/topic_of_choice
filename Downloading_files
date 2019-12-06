@@ -1,6 +1,6 @@
-wget https://drive.google.com/a/mtu.edu/file/d/1hmQni2L00XE09g_NUwWCCZmwwt-Bwsmj/view?usp=sharing
-wget https://drive.google.com/a/mtu.edu/file/d/1_FJEnIAVWwhisyvJzIRiZl_YboaniIFh/view?usp=sharing
-wget https://drive.google.com/a/mtu.edu/file/d/1BTCOFPdO5pd5GXOp_cQ6sjHtd6dipcxR/view?usp=sharing
-wget https://drive.google.com/a/mtu.edu/file/d/1raFtDtx2wu8Qg7NsXvI2E_AQFbv-ZU9B/view?usp=sharing
-wget https://drive.google.com/a/mtu.edu/file/d/1dt77G6605ABUl8yk3dK78hjBK4s1TsNc/view?usp=sharing
-wget https://drive.google.com/a/mtu.edu/file/d/1qhq8iK1YWfioFI3QCQiBFu4AlCCnm_mp/view?usp=sharing
+gdown.pl https://drive.google.com/file/d/1hmQni2L00XE09g_NUwWCCZmwwt-Bwsmj/edit D23_S12_L001_R1_001.fastq.gz
+gdown.pl https://drive.google.com/file/d/1_FJEnIAVWwhisyvJzIRiZl_YboaniIFh/edit D23_S12_L001_R2_001.fastq.gz
+gdown.pl https://drive.google.com/file/d/1BTCOFPdO5pd5GXOp_cQ6sjHtd6dipcxR/edit DG33_S9_L001_R1_001.fastq.gz
+gdown.pl https://drive.google.com/file/d/1raFtDtx2wu8Qg7NsXvI2E_AQFbv-ZU9B/edit DG33_S9_L001_R2_001.fastq.gz
+gdown.pl https://drive.google.com/file/d/1dt77G6605ABUl8yk3dK78hjBK4s1TsNc/edit G16_S4_L001_R1_001.fastq.gz
+gdown.pl https://drive.google.com/file/d/1qhq8iK1YWfioFI3QCQiBFu4AlCCnm_mp/edit G16_S4_L001_R2_001.fastq.gz
