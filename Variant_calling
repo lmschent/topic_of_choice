@@ -1,0 +1,27 @@
+mkdir variant
+cd variant
+samtools faidx GCF_000007825.1_ASM782v1_genomic.fna
+bcftools mpileup -f GCF_000007825.1_ASM782v1_genomic.fna 6008.bam | bcftools call -mv -Ob --ploidy 1 -o raw.calls.bcf
+bcftools filter --exclud 'QUAL < 30' raw.calls.bcf > calls.vcf
+less calls.vcf
+bcftools view -v snps calls.vcf > snp.vcf
+bgzip calls.vcf
+bcftools index calls.vcf.gz
+cat GCF_000007825.1_ASM782v1_genomic.fna | bcftools consensus calls.vcf.gz > GCF_000007825.1_ASM782v1_genomic_DSMZ.fasta
+
+bcftools mpileup -f GCF_000007825.1_ASM782v1_genomic.fna 60081.bam | bcftools call -mv -Ob --ploidy 1 -o raw.calls.bcf
+bcftools filter --exclud 'QUAL < 30' raw.calls.bcf > calls.vcf
+less calls.vcf
+bcftools view -v snps calls.vcf > snp.vcf
+bgzip calls.vcf
+bcftools index calls.vcf.gz
+cat GCF_000007825.1_ASM782v1_genomic.fna | bcftools consensus calls.vcf.gz > GCF_000007825.1_ASM782v1_genomic2_DSMZ.fasta
+
+samtools faidx GCF_000009045.1_ASM904v1_genomic.fna
+bcftools mpileup -f GCF_000009045.1_ASM904v1_genomic.fna 60083.bam | bcftools call -mv -Ob --ploidy 1 -o raw.calls.bcf
+bcftools filter --exclud 'QUAL < 30' raw.calls.bcf > calls.vcf
+less calls.vcf
+bcftools view -v snps calls.vcf > snp.vcf
+bgzip calls.vcf
+bcftools index calls.vcf.gz
+cat GCF_000009045.1_ASM904v1_genomic.fna | bcftools consensus calls.vcf.gz > GCF_000009045.1_ASM904v1_genomic_DSMZ.fasta
