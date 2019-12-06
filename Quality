@@ -1,0 +1,14 @@
+fastqc D23_S12_L001_R1_001.fastq.gz
+fastqc D23_S12_L001_R2_001.fastq.gz
+fastqc DG33_S9_L001_R1_001.fastq.gz
+fastqc DG33_S9_L001_R2_001.fastq.gz
+fastqc G16_S4_L001_R1_001.fastq.gz
+fastqc G16_S4_L001_R2_001.fastq.gz
+
+cutadapt -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -m 50 --max-n 0 -o D23_S12_L001_R1_001.cutadapt.fastq -p D23_S12_L001_R2_001.cutadapt.fastq D23_S12_L001_R1_001.fastq.gz D23_S12_L001_R2_001.fastq.gz
+cutadapt -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -m 50 --max-n 0 -o DG33_S9_L001_R1_001.cutadapt.fastq -p DG33_S9_L001_R2_001.cutadapt.fastq DG33_S9_L001_R1_001.fastq.gz DG33_S9_L001_R2_001.fastq.gz
+fastqc DG33_S9_L001_R1_001.cutadapt.fastq
+fastqc DG33_S9_L001_R2_001.cutadapt.fastq
+cutadapt -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -m 50 --max-n 0 -o G16_S4_L001_R1_001.cutadapt.fastq -p G16_S4_L001_R2_001.cutadapt.fastq G16_S4_L001_R1_001.fastq.gz G16_S4_L001_R2_001.fastq.gz
+fastqc G16_S4_L001_R1_001.cutadapt.fastq
+fastqc G16_S4_L001_R2_001.cutadapt.fastq
