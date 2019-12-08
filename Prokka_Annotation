@@ -3,14 +3,14 @@ cd Prokka
 
 cd Prokka_D23
 awk '/^>/{print ">D23_" ++i; next}{print}' < contigs.fasta > contigs_names.fasta
-prokka --outdir D23 --prefix D23 contigs_names.fasta
+prokka --outdir D23_ --prefix D23_ contigs_names.fasta
 
 cd ..
 cd Prokka_DG33
 awk '/^>/{print ">DG33_" ++i; next}{print}' < contigs.fasta > contigs_names.fasta
-prokka --outdir DG33 --prefix DG33 contigs_names.fasta
+prokka --outdir DG33_ --prefix DG33_ contigs_names.fasta
 
 cd ..
 cd Prokka_G16
 awk '/^>/{print ">G16_" ++i; next}{print}' < contigs.fasta > contigs_names.fasta
-prokka --outdir G16 --prefix G16 contigs_names.fasta
+prokka --outdir G16_ --prefix G16_ contigs_names.fasta
