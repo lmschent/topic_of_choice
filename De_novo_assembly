@@ -1,1 +1,12 @@
-cp topic_of_choice/G16_S4_L001_R2_001.fastq.gz de_novo_assembly
+conda activate de_novo
+spades.py -k 21,51,71,91,111,127 --careful --pe1-1 D23_S12_L001_R1_001.cutadapt.fastq --pe1-2 D23_S12_L001_R2_001.cutadapt.fastq -o D23_spades_output
+cd D23_spades_output
+quast contigs.fasta -o Quast_contigs
+
+spades.py -k 21,51,71,91,111,127 --careful --pe1-1 DG33_S9_L001_R1_001.cutadapt.fastq --pe1-2 DG33_S9_L001_R2_001.cutadapt.fastq -o DG33_spades_output
+cd DG33_spades_output
+quast contigs.fasta -o Quast_contigs
+
+spades.py -k 21,51,71,91,111,127 --careful --pe1-1 G16_S4_L001_R1_001.cutadapt.fastq --pe1-2 G16_S4_L001_R2_001.cutadapt.fastq -o G16_spades_output
+cd G16_spades_output
+quast contigs.fasta -o Quast_contigs
